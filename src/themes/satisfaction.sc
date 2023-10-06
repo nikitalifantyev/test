@@ -11,6 +11,7 @@ theme: /Satisfaction
             a: Спасибо за отзыв! Рады помочь! 
             script:
                 $analytics.setSessionResult("Положительный отзыв")
+            go!: /UpdatesInfo/AskToJoin
         
         state: UnhappyClient
             q: нет
