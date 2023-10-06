@@ -1,2 +1,52 @@
 <test>
-</test>    
+    
+    <test-case>
+        <q>/start</q>
+        <a state="/Welcome"/>
+        <a state="/Welcome"/>
+        <a state="/Service/SuggestHelp"/>
+        <q>да</q>
+        <a state="/Service/SuggestHelp/Yes"/>
+        <a state="/Phone/AskPhone"/>
+        <q>79000000000</q>
+        <a state="/Phone/IsItCorrect"/>
+        <q>В номере - ошибка.</q>
+        <a state="/Phone/AskPhone"/>
+        
+    </test-case>
+    
+    <test-case integration="true">
+        <q>/start</q> 
+        <responseData field="replies">
+            [
+                {"type":"text","text":"Здравствуйте!","state":"/Welcome"},
+                {"type":"text","text":"Меня зовут Окей.","state":"/Welcome"},
+                {"type":"image","imageUrl":"https://img.gazeta.ru/files3/346/13801346/TASS_39229574-pic_32ratio_1200x800-1200x800-12427.jpg","text":"Самолёт"},
+                {"type":"text","text":"Давайте я помогу вам купить билет на самолёт?","state":"/Service/SuggestHelp"},
+                {"type":"buttons","buttons":[{"text":"Да"},{"text":"Нет"}],"state":"/Service/SuggestHelp"}
+            ]
+        </responseData>
+        <a>Здравствуйте!</a>
+        <a>Меня зовут Окей.</a>
+        <a>Давайте я помогу вам купить билет на самолёт?</a>
+        <q>да</q>
+        <a>Буду рад вам помочь!</a>
+        <a>Подскажите, пожалуйста, вам номер телефона в формате 79ХХХХХХХХХ.</a>
+        <q>79000000000</q>
+        <a>Проверьте, пожалуйста, корректность вашего номера - 79000000000.</a>
+        <dateTime>2023-10-06 13:23:55</dateTime>
+        <q>Номер верный.</q>
+        <a>Спасибо за предоставленную информацию!</a>
+        <a>Сегодня (06.10) у нас действует крутая скидка!</a>
+        <a>Все бонусы при покупке сегодня удваиваются!</a>
+        <a>Назовите, пожалуйста, ваш город отправления.</a>
+        <q>Сочи</q>
+        <a>Ваш город отправления: Сочи.</a>
+        <a>Назовите, пожалуйста, ваш город прибытия.</a>
+        <q>Москва</q>
+        <a>Ваш город прибытия: Москва.</a>
+        <a state="/Weather/Current"/>
+        <a>Мы очень хотим сделать нашего бота лучше! Скажите, пожалуйста, вам понравился наш сервис?</a>
+    </test-case>
+    
+</test>

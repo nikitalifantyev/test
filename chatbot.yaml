@@ -13,6 +13,6 @@ caila:
     noMatchThreshold: 0.2
     
 injector:
-    botName: Валера
+    botName: Окей
     weatherApiKey: '3652de1ed00f821e8d8c31966de954f8'
     

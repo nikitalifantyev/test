@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "tretij-1000101328-RMQ",
-    "name" : "tretij-1000101328-RMQ",
+    "id" : "test_lifant_ev_n-1000105668-AYa",
+    "name" : "test_lifant_ev_n-1000105668-AYa",
     "folder" : "/platform"
   },
   "settings" : {
@@ -73,7 +73,8 @@
       "name" : "tariff",
       "entity" : "tariff",
       "required" : true,
-      "prompts" : [ "Какой у Вас класс обслуживания?", "Какой у Вас тариф?" ]
+      "prompts" : [ "Какой у Вас класс обслуживания?", "Какой у Вас тариф?" ],
+      "array" : false
     } ],
     "priority" : 0
   }, {
